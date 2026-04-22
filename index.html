@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SKTT Bali Guide — How to Get Your Local Document on Bukit</title>
+<meta name="description" content="Step-by-step guide to obtaining SKTT (local residency document) on Bukit, Bali. Map links, required documents, and offices to visit." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2129;
+    --surface-2: #232c36;
+    --accent: #ff7a45;
+    --accent-2: #ffb86b;
+    --text: #eef2f6;
+    --muted: #9aa8b5;
+    --border: #2d3741;
+    --success: #4ade80;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    background: linear-gradient(135deg, #1a2129 0%, #0f1419 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  header.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,122,69,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255,122,69,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(255,122,69,0.3);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    line-height: 1.15;
+    position: relative;
+  }
+  h1 .accent { color: var(--accent); }
+  .subtitle {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  section { padding: 60px 0; }
+
+  .intro {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    padding: 24px 28px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  .intro strong { color: var(--accent-2); }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .steps { list-style: none; counter-reset: step; }
+  .step {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 28px 28px 88px;
+    margin-bottom: 20px;
+    transition: transform 0.2s, border-color 0.2s;
+    counter-increment: step;
+  }
+  .step:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+  }
+  .step::before {
+    content: counter(step);
+    position: absolute;
+    left: 24px; top: 24px;
+    width: 44px; height: 44px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: #0f1419;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .step h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .step p { color: #cfd7df; font-size: 15.5px; }
+  .step .docs {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .step .docs strong { color: var(--text); }
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: rgba(255,122,69,0.12);
+    color: var(--accent);
+    border: 1px solid rgba(255,122,69,0.3);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s;
+  }
+  .map-link:hover { background: rgba(255,122,69,0.25); }
+  .map-link::before { content: '📍'; }
+
+  .cta {
+    background: linear-gradient(135deg, #2d1810 0%, #1a2129 100%);
+    border: 1px solid var(--accent);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin: 60px 0 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 32px;
+    align-items: center;
+  }
+  .cta-text h2 {
+    color: var(--accent-2);
+    margin-bottom: 12px;
+  }
+  .cta-text p {
+    color: #cfd7df;
+    margin-bottom: 20px;
+  }
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--accent);
+    color: #0f1419;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,122,69,0.4);
+  }
+  .qr-wrap {
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    line-height: 0;
+  }
+  .qr-wrap img {
+    width: 160px; height: 160px;
+    display: block;
+  }
+  @media (max-width: 640px) {
+    .cta { grid-template-columns: 1fr; text-align: center; }
+    .qr-wrap { margin: 0 auto; }
+    .step { padding: 24px 20px 24px 76px; }
+    .step::before { left: 18px; top: 20px; width: 40px; height: 40px; font-size: 16px; }
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    color: var(--muted);
+    font-size: 14px;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <span class="badge">Bukit · Bali Residents Guide</span>
+    <h1>How to Get Your <span class="accent">SKTT</span><br/>on Bukit, Bali</h1>
+    <p class="subtitle">A clear, step-by-step guide through every office, stamp, and document you need to obtain your local residency paper.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+
+    <div class="intro">
+      <strong>What is SKTT?</strong> It is a local residency document for foreigners living in Bali. If you live on Bukit, this guide walks you through the full process — offices to visit, documents to bring, and what happens at each stop.
+    </div>
+
+    <h2>The Process</h2>
+    <p class="section-sub">Six steps. Follow in order. Allow a few days total.</p>
+
+    <ol class="steps">
+
+      <li class="step">
+        <h3>Find your Banjar & locate the Kelian list</h3>
+        <p>First, figure out which <em>banjar</em> (local community) you live in. At the Kelurahan office you will find the list of Kelians (banjar heads).</p>
+        <a class="map-link" href="https://www.google.com/maps/place/Kantor+Kelurahan+Jimbaran/@-8.7762798,115.1646969,2087m/data=!3m1!1e3!4m15!1m8!3m7!1s0x2dd141d3e8100fa1:0x24910fb14b24e690!2sBali!3b1!8m2!3d-8.4095178!4d115.188916!16s%2Fg%2F121hxh1j!3m5!1s0x2dd244aff3e60dc3:0x5f0288ad67fff3d7!8m2!3d-8.7717227!4d115.172751!16s%2Fg%2F1hm5_tp4x" target="_blank" rel="noopener">Kantor Kelurahan Jimbaran</a>
+      </li>
+
+      <li class="step">
+        <h3>Visit the Kelian & fill the SKTT form</h3>
+        <p>Go to your Kelian, collect a blank SKTT form and fill it in. You will need a sponsor (usually the homeowner) and <strong>2 witnesses from your banjar</strong>.</p>
+        <div class="docs">
+          <strong>Bring copies of:</strong> your passport, your KITAS, sponsor's KTP, and both witnesses' KTPs.
+        </div>
+      </li>
+
+      <li class="step">
+        <h3>Return to Kelian for stamp & signature</h3>
+        <p>Once the form is filled and signed by sponsor + witnesses, go back to the Kelian to get the official stamp and signature.</p>
+      </li>
+
+      <li class="step">
+        <h3>Return to Kelurahan for second stamp</h3>
+        <p>Head back to the Kelurahan Jimbaran office. They add another stamp to your form.</p>
+        <a class="map-link" href="https://www.google.com/maps/place/Kantor+Kelurahan+Jimbaran/@-8.7762798,115.1646969,2087m/data=!3m1!1e3!4m15!1m8!3m7!1s0x2dd141d3e8100fa1:0x24910fb14b24e690!2sBali!3b1!8m2!3d-8.4095178!4d115.188916!16s%2Fg%2F121hxh1j!3m5!1s0x2dd244aff3e60dc3:0x5f0288ad67fff3d7!8m2!3d-8.7717227!4d115.172751!16s%2Fg%2F1hm5_tp4x" target="_blank" rel="noopener">Kantor Kelurahan Jimbaran</a>
+      </li>
+
+      <li class="step">
+        <h3>Camat Kuta Selatan — another stamp</h3>
+        <p>Next stop: the sub-district office (Camat). They issue another stamp.</p>
+        <div class="docs">
+          <strong>Bring copies of:</strong> passport, KITAS, sponsor's KTP.
+        </div>
+        <a class="map-link" href="https://www.google.com/maps/place/Kantor+Camat+Kuta+Selatan/@-8.7855715,115.1713888,2087m/data=!3m1!1e3!4m14!1m8!3m7!1s0x2dd141d3e8100fa1:0x24910fb14b24e690!2sBali!3b1!8m2!3d-8.4095178!4d115.188916!16s%2Fg%2F121hxh1j!3m4!1s0x2dd2448543645be1:0x5414596054d5b4c!8m2!3d-8.7832967!4d115.1784164" target="_blank" rel="noopener">Kantor Camat Kuta Selatan</a>
+      </li>
+
+      <li class="step">
+        <h3>Dinas Dukcapil Badung — get your SKTT</h3>
+        <p>Final stop: the Badung civil registry (Dinas Kependudukan dan Catatan Sipil). Here you finally receive your SKTT.</p>
+        <a class="map-link" href="https://www.google.com/maps/place/Dinas+Kependudukan+dan+Catatan+Sipil+Kabupaten+Badung/@-8.6481911,115.1848588,12156m/data=!3m1!1e3!4m15!1m8!3m7!1s0x2dd141d3e8100fa1:0x24910fb14b24e690!2sBali!3b1!8m2!3d-8.4095178!4d115.188916!16s%2Fg%2F121hxh1j!3m5!1s0x2dd2409b0a13158d:0x8d15d602b64a0038!8m2!3d-8.6049495!4d115.1789089!16s%2Fg%2F11bc7s57fr" target="_blank" rel="noopener">Dinas Dukcapil Kabupaten Badung</a>
+      </li>
+
+    </ol>
+
+    <div class="cta">
+      <div class="cta-text">
+        <h2>🍜 Hungry after all that paperwork?</h2>
+        <p>I also run <strong>GastroShop Bali</strong> — food delivery service on Bali via Telegram. Fresh meals, straight to your door. Tap the bot or scan the QR.</p>
+        <a class="cta-btn" href="https://t.me/GastroShop_Bali_bot" target="_blank" rel="noopener">Open @GastroShop_Bali_bot →</a>
+      </div>
+      <div class="qr-wrap">
+        <img src="image.png" alt="GastroShop Bali Telegram bot QR code" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Made with 🌴 on Bukit, Bali · <a href="https://t.me/GastroShop_Bali_bot" target="_blank" rel="noopener">@GastroShop_Bali_bot</a>
+  </div>
+</footer>
+
+</body>
+</html>
