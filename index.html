@@ -221,6 +221,25 @@
     border-top: 1px solid var(--border);
   }
   footer a { color: var(--accent); text-decoration: none; }
+  .visits {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    padding: 6px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .visits strong { color: var(--accent-2); font-weight: 700; }
+  .visits .dot {
+    width: 8px; height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--success);
+  }
 </style>
 </head>
 <body>
@@ -304,8 +323,22 @@
 <footer>
   <div class="container">
     Made with 🌴 on Bukit, Bali · <a href="https://t.me/GastroShop_Bali_bot" target="_blank" rel="noopener">@GastroShop_Bali_bot</a>
+    <div><span class="visits"><span class="dot"></span>Visits: <strong id="visit-count">…</strong></span></div>
   </div>
 </footer>
+
+<script>
+  fetch('/api/visits', { method: 'POST' })
+    .then(r => r.json())
+    .then(d => {
+      const el = document.getElementById('visit-count');
+      if (el && typeof d.count === 'number') el.textContent = d.count.toLocaleString();
+    })
+    .catch(() => {
+      const el = document.getElementById('visit-count');
+      if (el) el.textContent = '—';
+    });
+</script>
 
 </body>
 </html>
